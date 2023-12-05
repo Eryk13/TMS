@@ -1,0 +1,10 @@
+<ul class="border-2 border-solid rounded-md border-slate-500">
+    @for (tournament of tournaments; track tournament.id) 
+    {
+        <app-tournament-list-item [name]="tournament.name"></app-tournament-list-item>
+    } 
+    @empty 
+    {
+        There were no items in the list.
+    }
+</ul>
