@@ -1,3 +1,19 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<nav class="flex justify-between p-4 border-b border-slate-700">
+  <a class="font-bold" [routerLink]="['/']">Tournament Generator</a>
+  <ul class="flex gap-4 text-inherit ">
+    <li>
+      <a class="hover:text-slate-400" [routerLink]="['/']">test</a>
+    </li>
+    <li>
+      <a class="hover:text-slate-400" [routerLink]="['/']">test2</a>
+    </li>
+    <li>
+      <a class="hover:text-slate-400" [routerLink]="['/']">test3</a>
+    </li>
+  </ul>
+  <div class="flex gap-4">
+    <button class="text-inherit hover:text-slate-400">Log in</button>
+    <button class="text-inherit hover:text-slate-400">Register</button>
+  </div>
+</nav>
+<router-outlet></router-outlet>
