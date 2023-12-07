@@ -1,0 +1,32 @@
+<div>
+    @for(stage of schedule; track $index) {
+        <div>
+            <h4 class="my-4">{{stage.name}}</h4>
+            <div class="flex">
+                @for(game of stage.schedule; track $index){
+                    <div class="border-2 border-solid p-2 flex">
+                        <div>
+                            <div class="flex justify-between p-4">
+                                <p>{{game.participant1}}</p>
+                                <div class="flex ml-4">
+                                    <p>{{game.score1}}</p>
+                                    <p>{{"(" + game.extraScore1 + ")"}}</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between p-4">
+                                <p>{{game.participant2}}</p>
+                                <div class="flex ml-4">
+                                    <p>{{game.score2}}</p>
+                                    <p>{{"(" + game.extraScore2 + ")"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-l-2 p-4 flex items-center justify-center">
+                            {{game.date | date}}
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>

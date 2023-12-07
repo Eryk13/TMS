@@ -1,0 +1,65 @@
+{
+    "tournament": {
+        "id": 1,
+        "name": "premier league",
+        "discipline": "e-sport",
+        "participants": [
+            "newcastle united", "everton"
+        ],
+        "participantsType": "TEAM",
+        "userId": 1,
+        "user": {
+            "id": 1,
+            "username": "test-user"
+        },
+        "startDate": "Thu Dec 07 2023 21:15:39 GMT+0100 (Central European Standard Time)"
+    },
+    "schedule": [
+        {
+            "name": "round16",
+            "schedule": [
+                {
+                    "id": 0,
+                    "date": "Thu Dec 07 2023 21:15:39 GMT+0100 (Central European Standard Time)",
+                    "participant1": "test",
+                    "participant2": "test22222222222",
+                    "score1": 1,
+                    "score2": 1,
+                    "extraScore1": 2,
+                    "extraScore2": 3
+                },
+                {
+                    "id": 0,
+                    "date": "Thu Dec 07 2023 21:15:39 GMT+0100 (Central European Standard Time)",
+                    "participant1": "test",
+                    "participant2": "test22222222222",
+                    "score1": 1,
+                    "score2": 1,
+                    "extraScore1": 2,
+                    "extraScore2": 3
+                },
+                {
+                    "id": 0,
+                    "date": "new Date()",
+                    "participant1": "test",
+                    "participant2": "test22222222222",
+                    "score1": null,
+                    "score2": null,
+                    "extraScore1": null,
+                    "extraScore2": null
+                },
+                {
+                    "id": 0,
+                    "date": "new Date()",
+                    "participant1": "test",
+                    "participant2": "test22222222222",
+                    "score1": 1,
+                    "score2": 4,
+                    "extraScore1": null,
+                    "extraScore2": null
+                }
+            ]
+        }
+    ]
+}
+  

@@ -1,0 +1,15 @@
+<main class="mt-8 container mx-auto px-4">
+    @if(tournamentDetail) {
+        <h1 class="text-lg font-bold">{{tournamentDetail.tournament.name}}</h1>
+        <h4 class="font-italic text-slate-500 mb-2">{{tournamentDetail.tournament.user.username}}</h4>
+        <div class="flex gap-4 border-b-2 border-solid pb-4">
+            <div class="border-solid border-2 rounded-lg px-2 bg-red-500 border-transparent py-0">{{tournamentDetail.tournament.discipline}}</div>
+        </div>
+        <section class="mt-4">
+            <app-schedule [schedule]="tournamentDetail.schedule"></app-schedule>
+        </section>
+    }
+    @else {
+        <p>Tournament with this id doesn't exist</p>
+    }
+</main>
