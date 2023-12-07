@@ -1,6 +1,12 @@
+import { User } from "../../user/models/user";
+
 export interface Tournament {
   id: number;
   name: string;
+  discipline: string;
   participants: string[];
-  participants_type: string; //TEAM or PLAYER
+  participantsType: string; //TEAM or PLAYER
+  user: User;
+  userId: number;
+  startDate: Date; 
 }

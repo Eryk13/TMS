@@ -1,14 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tournament-list-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './tournament-list-item.component.html',
   styleUrl: './tournament-list-item.component.css'
 })
 export class TournamentListItemComponent {
   @Input() name: string | undefined;
-  @Input() participants_type: string | undefined;
-  @Input() participants: string[] | undefined;
+  @Input() author: string | undefined;
+  @Input() discipline: string | undefined;
+  @Input() startDate: Date | undefined;
+
 }

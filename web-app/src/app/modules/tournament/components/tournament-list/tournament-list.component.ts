@@ -10,5 +10,7 @@ import { TournamentListItemComponent } from '../tournament-list-item/tournament-
   styleUrl: './tournament-list.component.css'
 })
 export class TournamentListComponent {
-  tournaments: Tournament[] = [{id: 1, name: 'premier league', participants: ['newcastle united', 'everton'], participants_type: 'TEAM'}]
+  tournaments: Tournament[] = [
+    {id: 1, name: 'premier league', discipline: "e-sport", participants: ['newcastle united', 'everton'], participantsType: 'TEAM', userId: 1, user: {id: 1, username: 'test-user'}, startDate: new Date()},
+  ]
 }
