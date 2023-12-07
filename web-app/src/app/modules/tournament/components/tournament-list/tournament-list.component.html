@@ -1,7 +1,7 @@
 <ul class="border-2 border-solid rounded-md border-slate-500 grid grid-cols-1 divide-y divide-slate-500">
     @for (tournament of tournaments; track tournament.id) 
     {
-        <app-tournament-list-item [name]="tournament.name" [author]="tournament.user.username" [discipline]="tournament.discipline" [startDate]="tournament.startDate"></app-tournament-list-item>
+        <app-tournament-list-item [name]="tournament.name" [author]="tournament.user.username" [discipline]="tournament.discipline" [startDate]="tournament.startDate" [routerLink]="['tournament', tournament.id]"></app-tournament-list-item>
     } 
     @empty 
     {
