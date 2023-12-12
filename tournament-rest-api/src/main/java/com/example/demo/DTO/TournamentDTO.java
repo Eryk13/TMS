@@ -1,7 +1,5 @@
 package com.example.demo.DTO;
 
-import com.example.demo.model.Participant;
-
 import java.util.List;
 
 public class TournamentDTO {
@@ -10,13 +8,13 @@ public class TournamentDTO {
     private String name;
     private String discipline;
     private String participantType;
-    private List<Participant> participants;
+    private List<ParticipantDTO> participants;
     private List<ScheduleDTO> schedules;
 
     public TournamentDTO() {
     }
 
-    public TournamentDTO(int id, String name, String discipline, String participantType, List<Participant> participants, List<ScheduleDTO> schedules) {
+    public TournamentDTO(int id, String name, String discipline, String participantType, List<ParticipantDTO> participants, List<ScheduleDTO> schedules) {
         this.id = id;
         this.name = name;
         this.discipline = discipline;
@@ -57,11 +55,11 @@ public class TournamentDTO {
         this.participantType = participantType;
     }
 
-    public List<Participant> getParticipants() {
+    public List<ParticipantDTO> getParticipants() {
         return participants;
     }
 
-    public void setParticipants(List<Participant> participants) {
+    public void setParticipants(List<ParticipantDTO> participants) {
         this.participants = participants;
     }
 

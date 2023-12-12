@@ -1,10 +1,10 @@
-package com.example.demo.model;
+package com.example.demo.DTO;
 
-public abstract class Participant {
+public abstract class ParticipantDTO {
     private int id;
     private String name;
 
-    public Participant(String name) {
+    public ParticipantDTO(String name) {
         this.name = name;
     }
 

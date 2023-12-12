@@ -3,9 +3,8 @@ package com.example.demo.service;
 import com.example.demo.DTO.PlayerDTO;
 import com.example.demo.DTO.ScheduleDTO;
 import com.example.demo.DTO.TournamentDTO;
-import com.example.demo.model.Participant;
+import com.example.demo.DTO.ParticipantDTO;
 import com.github.javafaker.Faker;
-import jakarta.servlet.http.Part;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -24,7 +23,7 @@ public class FakeTournamentService implements TournamentService{
         List<TournamentDTO> tournaments = new ArrayList<>();
         int id = 0;
         List<ScheduleDTO> schedule = scheduleDTOS();
-        List<Participant> participants = participants(schedule, "PLAYER");
+        List<ParticipantDTO> participants = participants(schedule, "PLAYER");
         for(int i=0; i<100; i++) {
 
             String name = faker.esports().event();
@@ -47,8 +46,8 @@ public class FakeTournamentService implements TournamentService{
         }
         return scheduleDTOS;
     }
-    private List<Participant> participants(List<ScheduleDTO> schedule, String type) {
-        Map<String ,Participant> participants = new HashMap<>();
+    private List<ParticipantDTO> participants(List<ScheduleDTO> schedule, String type) {
+        Map<String , ParticipantDTO> participants = new HashMap<>();
         for(ScheduleDTO item : schedule) {
             if(type.equals("PLAYER")) {
                 participants.put(item.getParticipant1Name(), new PlayerDTO(item.getParticipant1Name()));
