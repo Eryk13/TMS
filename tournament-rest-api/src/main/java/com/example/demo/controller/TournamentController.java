@@ -4,6 +4,7 @@ import com.example.demo.DTO.TournamentDTO;
 
 import com.example.demo.service.TournamentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,7 @@ public class TournamentController {
     public TournamentController(@Autowired TournamentService tournamentService) {
         this.tournamentService = tournamentService;
     }
+    @GetMapping()
     public List<TournamentDTO> tournaments() {
         return tournamentService.getAll();
     }

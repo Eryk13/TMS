@@ -11,7 +11,7 @@ public class TournamentDTO {
     private String discipline;
     private String participantType;
     private List<Participant> participants;
-    private  List<ScheduleDTO> schedules;
+    private List<ScheduleDTO> schedules;
 
     public TournamentDTO() {
     }

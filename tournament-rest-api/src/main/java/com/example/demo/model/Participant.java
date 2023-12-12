@@ -4,6 +4,10 @@ public abstract class Participant {
     private int id;
     private String name;
 
+    public Participant(String name) {
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }
