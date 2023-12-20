@@ -1,17 +1,33 @@
-<form class="flex flex-col">
-    <input type="text" placeholder="name"/>
-    <select>
-        <option selected disabled hidden>discipline</option>
-        <option>e-sport</option>
-        <option>other</option>
-    </select>
+<form class="flex flex-col border-solid border-2 p-8 w-full" (ngSubmit)="onSubmit()" [formGroup]="form">
+    <h1 class="text-2xl my-4">Create tournament</h1>    
+    <label class="my-2" for="name">Name</label>
+    <input type="text" class="border-solid border-2 p-2 mb-4" placeholder="Name" id="name" formControlName="name"/>
+    <div class="flex gap-4 mb-4">
+        <div class="border-2 border-solid p-2 flex-1">
+            <select class="w-full" formControlName="type">
+                <option selected disabled hidden>Type</option>
+                <option>e-sport</option>
+                <option>other</option>
+            </select>
+        </div>
+        <div class="border-2 border-solid p-2 flex-1" >
+            <select class="w-full" formControlName="discipline">
+                <option selected disabled hidden>Discipline</option>
+                <option>e-sport</option>
+                <option>other</option>
+            </select>
+        </div>
+    </div>
+    <label class="mb-2">Participant type</label>
     <div>
-        <input type="radio" id="participant_type_player" name="participantType" value="player" />
-        <label for="participant_type_player">player based</label>
+        <input type="radio" id="participant_type_player" name="participantType" value="player" formControlName="participantType"/>
+        <label for="participant_type_player" class="ml-4">Player based</label>
     </div>
     <div>
-        <input type="radio" id="participant_type_team" name="participantType" value="team" />
-        <label for="participant_type_team">team based</label>
+        <input type="radio" id="participant_type_team" name="participantType" value="team" formControlName="participantType" />
+        <label for="participant_type_team" class="ml-4">Team based</label>
     </div>
-    <button>Next</button>
+    <div class="flex justify-end">
+        <button class="border-solid border-2 px-8 py-2 hover:bg-slate-100">Create</button>
+    </div>
 </form>
