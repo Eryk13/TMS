@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface TournamentService {
     List<TournamentDTO> getAll();
+    TournamentDTO getById(int id);
 }

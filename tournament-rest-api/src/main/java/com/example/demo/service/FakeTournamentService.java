@@ -46,6 +46,19 @@ public class FakeTournamentService implements TournamentService{
 
         return tournaments;
     }
+
+    @Override
+    public TournamentDTO getById(int id) {
+        List<ScheduleDTO> schedule = scheduleDTOS();
+        String type = id % 2 == 0 ? "TEAM" : "PLAYER";
+        List<ParticipantDTO> participants = participants(schedule, type);
+
+        String name = faker.esports().event();
+        String discipline = faker.esports().game();
+
+        return new TournamentDTO(id, name, discipline, type, participants, schedule, new UserDTO("test1234"));
+    }
+
     private List<ScheduleDTO> scheduleDTOS() {
         List<ScheduleDTO> scheduleDTOS = new ArrayList<>();
         for(int i=0; i<16; i++) {
