@@ -8,19 +8,29 @@ public class TournamentDTO {
     private String name;
     private String discipline;
     private String participantType;
+    private UserDTO user;
     private List<ParticipantDTO> participants;
     private List<ScheduleDTO> schedules;
 
     public TournamentDTO() {
     }
 
-    public TournamentDTO(int id, String name, String discipline, String participantType, List<ParticipantDTO> participants, List<ScheduleDTO> schedules) {
+    public TournamentDTO(int id, String name, String discipline, String participantType, List<ParticipantDTO> participants, List<ScheduleDTO> schedules, UserDTO user) {
         this.id = id;
         this.name = name;
         this.discipline = discipline;
         this.participantType = participantType;
         this.participants = participants;
         this.schedules = schedules;
+        this.user = user;
+    }
+
+    public UserDTO getUser() {
+        return user;
+    }
+
+    public void setUser(UserDTO user) {
+        this.user = user;
     }
 
     public int getId() {

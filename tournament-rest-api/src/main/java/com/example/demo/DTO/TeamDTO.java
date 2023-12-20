@@ -5,7 +5,7 @@ import java.util.List;
 public class TeamDTO extends ParticipantDTO {
     private List<PlayerDTO> players;
 
-    public TeamDTO(List<PlayerDTO> players, String name) {
+    public TeamDTO(String name, List<PlayerDTO> players) {
         super(name);
         this.players = players;
     }
