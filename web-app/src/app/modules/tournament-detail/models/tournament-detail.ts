@@ -3,5 +3,5 @@ import { TournamentStage } from "./tournament-stage";
 
 export interface TournamentDetail {
     tournament: Tournament;
-    schedule: TournamentStage[];
+    stages: TournamentStage[];
 }

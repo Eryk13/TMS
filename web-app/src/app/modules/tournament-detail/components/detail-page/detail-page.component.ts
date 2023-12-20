@@ -1,17 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Tournament } from '../../../tournament/models/tournament';
 import { ScheduleComponent } from '../schedule/schedule.component';
 import { TournamentDetail } from '../../models/tournament-detail';
+import { TournamentService } from '../../../tournament/services/tournament.service';
+import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-detail-page',
   standalone: true,
-  imports: [ScheduleComponent],
+  imports: [ScheduleComponent, CommonModule],
   templateUrl: './detail-page.component.html',
   styleUrl: './detail-page.component.css'
 })
-export class DetailPageComponent {
-  tournamentDetail: TournamentDetail | undefined = {tournament: {id: 1, name: 'premier league', discipline: "e-sport", participants: ['newcastle united', 'everton'], participantsType: 'TEAM', userId: 1, user: {id: 1, username: 'test-user'}, startDate: new Date()},
-    schedule: [{name: 'round16', schedule: [{id: 0, date: new Date(), participant1: 'test', participant2: 'test22222222222', score1: 1, score2: 1, extraScore1: 2, extraScore2: 3}]}]}
-  ;
+export class DetailPageComponent implements OnInit {
+  
+  tournamentDetail: TournamentDetail | undefined;
+
+  constructor(private tournamentServcie: TournamentService) {}
+
+  ngOnInit(): void {
+    this.loadData(1);
+  }
+
+  
+  loadData(id: number) {
+    this.tournamentServcie.getDetail(id).subscribe({
+      next: (res) => {
+        this.tournamentDetail = res;
+        console.log(res)
+      }
+    });
+  }
 }

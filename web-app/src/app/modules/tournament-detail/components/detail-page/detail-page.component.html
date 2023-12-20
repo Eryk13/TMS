@@ -6,7 +6,7 @@
             <div class="border-solid border-2 rounded-lg px-2 bg-red-500 border-transparent py-0">{{tournamentDetail.tournament.discipline}}</div>
         </div>
         <section class="mt-4">
-            <app-schedule [schedule]="tournamentDetail.schedule"></app-schedule>
+            <app-schedule [schedule]="tournamentDetail.stages"></app-schedule>
         </section>
     }
     @else {

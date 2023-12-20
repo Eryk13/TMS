@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { TournamentStage } from '../../models/tournament-stage';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +9,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './schedule.component.html',
   styleUrl: './schedule.component.css'
 })
-export class ScheduleComponent {
+export class ScheduleComponent implements OnChanges{
+
     @Input() schedule: TournamentStage[] | undefined;
+
+    ngOnChanges() {
+      console.log(this.schedule)
+
+    }
 }

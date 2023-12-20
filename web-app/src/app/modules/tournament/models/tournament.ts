@@ -1,3 +1,4 @@
+import { Schedule } from "../../tournament-detail/models/schedule";
 import { User } from "../../user/models/user";
 
 export interface Tournament {
@@ -9,4 +10,5 @@ export interface Tournament {
   user: User;
   userId: number;
   startDate: Date; 
+  schedules: Schedule;
 }
